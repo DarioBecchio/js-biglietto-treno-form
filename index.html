@@ -4,11 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <div>Come ti chiami? <input id="fullName" type="text" placeholder="Scrivi il tuo nome completo" value="Dario Becchio"><button id="save">Save</button></div>
-    <div>Quanti Km devi percorrere?<input id="distance" type="number" placeholder="Scrivi i Km totali" value="100" ></div>
-    <div>Quanti anni hai?<input id="age" type="number" placeholder="Scrivi la tua età" value="10"></div>
+<div class="container bg-purple">
+    <h1> Calcola il prezzo del tuo biglietto </h1>
+    <div class="card bg-white">
+        <div class="d-flex flex-row justify-content-around">
+            <div class="card-body ">
+                <div class="mb-3 ">
+                    <label for="formGroupExampleInput" class="form-label">Nome e Cognome</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Scrivi qui il tuo nome e cognome">
+                  </div>
+            </div>
+            <div class="card-body ">
+                <div class="mb-3 ">
+                    <label for="formGroupExampleInput" class="form-label">Distanza da percorrere</label>
+                    <input type="text" class="form-control" id="distance" placeholder="Scrivi qui i km di percorrenza">
+                  </div>
+            </div>
+            <div class="card-body ">            
+                    <div class="input-group flex-column mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Seleziona la fascia d'età</label>
+                        <select class="form-select" id="age" aria-label="Example select with button addon">
+                          <option selected>Clicca qui</option>
+                          <option value="1">Minorenne</option>
+                          <option value="2">Maggiorenne</option>
+                          <option value="3">Over 65</option>
+                        </select>
+                    </div>              
+            </div>
+        </div>
+        
+        <div class="d-flex flex-row justify-content-evenly">
+            <button type="button" class="btn btn-primary btn-sm">Genera</button>
+            <button type="button" class="btn btn-secondary btn-sm">Annulla</button>
+        </div>
+        
+    </div>
+    <h1> Il tuo bilgietto </h1>
+    <div class="card bg-white">
+    <h3> Dettaglio passeggeri</h3> 
+    <div class="row border-top-bottom-1-dark-subtle">
+        <div class="col bg-gray">
+            <h5>Nome passeggero</h5>
+            <span></span>
+        </div>
+        <div class="col">
+            <h5> Offerta </h5>
+            <span> </span>
+        </div>
+        <div class="col">
+           <h5> Carrozza </h5>
+        </div>
+        <div class="col">
+            <h5> Codice cp </h5>
+            <span></span>
+        </div>
+        <div class="col">
+            <h5> Costo biglietto </h5>
+            <span> </span>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+    <div>Come ti chiami? <input id= type="text" placeholder="Scrivi il tuo nome completo" value="Dario Becchio"><button id="save_name">Save</button></div>
+    <div>Quanti Km devi percorrere?<input id="" type="number" placeholder="Scrivi i Km totali" value="100" ><button id="save_distance">Save</button></div>
+    <div>Quanti anni hai?<input id="" type="number" placeholder="Scrivi la tua età" value="10"><button id="save_age">Save</button></div>
     <div id="result">Il tuo totale è: <button id="total">Calcola il tuo totale</button></div>
 
     <script src="./scripr.js"></script>
