@@ -14,25 +14,26 @@
             <div class="card-body ">
                 <div class="mb-3 ">
                     <label for="formGroupExampleInput" class="form-label">Nome e Cognome</label>
-                    <input type="text" class="form-control" id="name_surname" placeholder="Scrivi qui il tuo nome e cognome" value="">
+                    <input type="text" class="form-control" id="nomeCognome" placeholder="Scrivi qui il tuo nome e cognome" value="">
                   </div>
             </div>
             <div class="card-body">
-                <div class="mb-3 ">
+                <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Distanza da percorrere</label>
-                    <input type="number" class="form-control" id="travel_lenght" placeholder="Scrivi qui i km di percorrenza">
+                    <input type="number" class="form-control" id="tot_km" placeholder="Scrivi qui i km di percorrenza">
                   </div>
             </div>
             <div class="card-body ">            
-                    <div class="input-group flex-column mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Seleziona la fascia d'età</label>
-                        <input type="number" class="form-control" id="my_age" placeholder="Scrivi qui la tua età">                        
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Scrivi la tua età </label>
+                        <input type="number" class="form-control" id="Età" placeholder="Scrivi qui la tua età">                        
                     </div>              
             </div>
+            
         </div>        
         <div class="d-flex flex-row justify-content-evenly">
             <button id="saveInput" type="button" class="btn btn-primary btn-sm">Genera</button>
-            <button type="button" class="btn btn-secondary btn-sm">Annulla</button>
+            <button id="deleteButton" type="button" class="btn btn-secondary btn-sm">Annulla</button>
         </div>
         
     </div>
@@ -40,24 +41,25 @@
     <div class="card bg-white">
     <h3> Dettaglio passeggeri</h3> 
     <div class="row border-top-bottom-1-dark-subtle">
-        <div class="col bg-gray">
+        <div class="col">
             <h5>Nome passeggero</h5>
-            <span></span>
+            <span class="passengerDetail"></span>
         </div>
         <div class="col">
             <h5> Offerta </h5>
-            <span> </span>
+            <span class="passengerOffer"></span>
         </div>
         <div class="col">
            <h5> Carrozza </h5>
+           <span class="passengerCoach"></span>
         </div>
         <div class="col">
             <h5> Codice cp </h5>
-            <span></span>
+            <span class="passengerCode"></span>
         </div>
         <div class="col">
             <h5> Costo biglietto </h5>
-            <span> </span>
+            <span class="passengerPrice"> </span>
         </div>
     </div>
 

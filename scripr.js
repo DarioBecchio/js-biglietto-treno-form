@@ -11,32 +11,47 @@ const travel_lenght = document.getElementById('tot_km');
 const my_age = document.getElementById('Età');
 const save_input = document.getElementById('saveInput');
 const km_price = 0.21
-//Creo un evento per calcolare il totale
+//Creo un evento per calcolare il totale e stampare sul documento i dettagli di pagamento
 save_input.addEventListener('click' , function (){
 
   console.log('clicked'); 
   const saved_age = parseInt(my_age.value)
   const saved_km = parseInt(travel_lenght.value)
-  console.log(saved_age , saved_km);
+  const saved_name = (name_surname.value)
+  //console.log(saved_age , saved_km , saved_name);
   const gross_total = ( saved_km * km_price ) ;
-  console.log(gross_total); 
-
+  let my_coach = Math.floor((Math.random() * 10) + 1);
+  let my_code = Math.floor((Math.random() * 100000) + 1);
+  //console.log(my_coach , my_code);
+  //console.log(gross_total);
+  document.querySelector('.passengerDetail').innerHTML = `${saved_name}` ;
+  ;
+//applico gli sconti al totale in base all'età utente e stampo il totale
 if (saved_age < 18){
   const total_price = ( gross_total - (gross_total * 0.20) ).toFixed(2);
   console.log(total_price);
-  document.getElementById('totale').innerHTML = (`Il tuo totale è ${total_price} €`) ;
-  
+  document.querySelector('.passengerPrice').innerHTML = `€ ${total_price}`;
+  document.querySelector('.passengerOffer').innerHTML = `Sconto young 20%`
 } else if (saved_age > 65){
   const total_price = ( gross_total - (gross_total * 0.40) ).toFixed(2);
-  document.getElementById('totale').innerHTML = (`Il tuo totale è ${total_price} €`) ;
+  document.querySelector('.passengerPrice').innerHTML = `€ ${total_price}`;
+  document.querySelector('.passengerOffer').innerHTML = `Sconto senior 40%`
 } else{
 
-  document.getElementById('totale').innerHTML = (`Il tuo totale è ${gross_total} €`) ;
+  document.querySelector('.passengerPrice').innerHTML = `€ ${gross_total}`;
+  document.querySelector('.passengerOffer').innerHTML = `Biglietto standard`
 }
-
+document.querySelector('.passengerCoach').innerHTML = `${my_coach}`;
+document.querySelector('.passengerCode').innerHTML = `${my_code}`;
 }
 )
 
+const delete_input = document.getElementById('deleteButton');
+delete_input.addEventListener('click' , function(){
+  document.getElementById('Età').value = ""
+  document.getElementById('tot_km').value = ""
+  document.getElementById('nomeCognome').value = ""
+})
 /*
 //Creo una costante con il valore del nome e cognome
 const full_name = document.getElementById('fullName').value
